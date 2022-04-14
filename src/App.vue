@@ -16,7 +16,8 @@
       </BlueMenuComp>
 
       <footer>
-
+        <UpperFooterComp></UpperFooterComp>
+        <BottomFooterComp></BottomFooterComp>
       </footer>
     
   </div>
@@ -26,13 +27,17 @@
 import LogoComp from './components/LogoComp.vue';
 import NavbarComp from './components/NavbarComp.vue';
 import BlueMenuComp from './components/BlueMenuComp.vue';
+import UpperFooterComp from './components/UpperFooterComp.vue';
+import BottomFooterComp from './components/BottomFooterComp.vue';
 
 export default {
   name: 'App',
   components: {
     LogoComp,
     NavbarComp,
-    BlueMenuComp
+    BlueMenuComp,
+    UpperFooterComp,
+    BottomFooterComp,
   }
 }
 </script>

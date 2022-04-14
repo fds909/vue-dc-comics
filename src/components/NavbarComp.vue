@@ -19,7 +19,7 @@
 
 </script>
 
-<style lang="scss">
+<style scooped>
     ul {
         display: flex;
         list-style-type: none;

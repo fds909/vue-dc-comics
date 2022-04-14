@@ -56,6 +56,6 @@
     .buy-text {
         font-size: 14px;
         text-transform: uppercase;
-        margin: 0 5px;
+        margin-left: 10px;
     }
 </style>
