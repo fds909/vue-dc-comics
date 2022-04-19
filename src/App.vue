@@ -9,7 +9,17 @@
 
       <main>
         <JumboComp/>
-        <CurrentSeriesComp/>
+        <div class="container">
+          <div class="current-series">
+            <div class="series-title">Current series</div>
+            <SerieComp
+              v-for="(element, index) in cards"
+              :key="index"
+              :details="element"
+            />
+            <div class="load-more">Load more</div>
+          </div>
+        </div>
       </main>
       
       <BlueMenuComp>
@@ -30,7 +40,7 @@ import BlueMenuComp from './components/BlueMenuComp.vue';
 import UpperFooterComp from './components/UpperFooterComp.vue';
 import BottomFooterComp from './components/BottomFooterComp.vue';
 import JumboComp from './components/JumboComp.vue';
-import CurrentSeriesComp from './components/CurrentSeriesComp.vue';
+import SerieComp from './components/SerieComp.vue';
 
 export default {
   name: 'App',
@@ -41,7 +51,7 @@ export default {
     UpperFooterComp,
     BottomFooterComp,
     JumboComp,
-    CurrentSeriesComp,
+    SerieComp,
   },
   data() {
     return {
@@ -159,5 +169,39 @@ export default {
   main p {
     font-size: 22px;
     font-weight: bold;
+  }
+
+  .current-series {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 10px;
+    position: relative;
+    background-color: #1c1c1c;
+    padding: 40px 0;
+  }
+
+  .series-title {
+    background-color: #0282f9;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px 10px;
+    width: 250px;
+    text-align: center;
+    position: absolute;
+    top: -20px;
+  }
+
+  .load-more {
+    font-weight: bold;
+    background-color: #0282f9;
+    color: white;
+    text-transform: uppercase;
+    padding: 5px 40px;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
   }
 </style>
